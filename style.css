@@ -1,0 +1,421 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: antiquewhite;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+li {
+  text-decoration: none;
+  width: 80px;
+  text-align: center;
+  padding: 16px;
+}
+
+li:nth-child(5) {
+  background-color: rgb(85, 208, 85, 0.8);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+select {
+  -webkit-appearance: none;
+  background-color: rgb(85, 208, 85, 0.8);
+  outline: none;
+  text-align: center;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+li:hover {
+  background-color: black;
+}
+
+li:hover a {
+  color: bisque;
+}
+
+li:hover select {
+  background-color: rgba(9, 10, 9, 0.8);
+  color: bisque;
+}
+
+body {
+  background-color: black;
+}
+
+#logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#interrupt {
+  background-color: rgb(85, 208, 85, 0.8);
+}
+
+#interrupt:hover {
+  background-color: black;
+}
+
+/* animation */
+
+.main {
+  width: 95vw;
+  height: 100vh;
+  margin-top: 30px;
+  background-attachment: fixed;
+  position: relative;
+  box-sizing: border-box;
+}
+.d1 {
+  position: absolute;
+  background-image: url("nn12.png");
+  background-size: 1100px 700px;
+
+  height: 30vh;
+  width: 15vw;
+
+  background-position: 0 50%;
+
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  animation: dd1 10s infinite, dd12 10s infinite;
+  animation-delay: 1s, 14s;
+}
+.d2 {
+  position: absolute;
+  background-image: url("puppy.jpg");
+  background-size: 1000px 900px;
+
+  height: 50vh;
+  width: 25vw;
+
+  background-position: -10vw 50%;
+  left: 10vw;
+
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  animation: dd2 10s 2;
+  animation-delay: 4s;
+}
+.d3 {
+  position: absolute;
+  background-image: url("puppy.jpg");
+  background-size: 1700px 900px;
+  overflow: hidden;
+
+  height: 90vh;
+  width: 40vw;
+  left: 25vw;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+  background-position: -35vw 50%;
+
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  animation: dd3 10s 2;
+  animation-delay: 4s;
+}
+.d4 {
+  position: absolute;
+  overflow: hidden;
+  background-image: url("blabla.jpg");
+  background-size: 2000px 900px;
+
+  height: 80vh;
+  width: 25vw;
+  left: 60vw;
+  background-position: -70vw 50%;
+
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  animation: dd4 10s 2;
+  animation-delay: 4s;
+}
+
+@keyframes dd1 {
+  0% {
+  }
+  50% {
+    width: 95vw;
+  }
+}
+@keyframes dd12 {
+  0% {
+  }
+  50% {
+    background-position: Calc(0vw - 40px) 50%;
+  }
+}
+@keyframes dd2 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-10vw - 40px) 50%;
+  }
+}
+@keyframes dd3 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-35vw - 40px) 50%;
+  }
+}
+@keyframes dd4 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-70vw - 40px) 50%;
+  }
+}
+
+/* grid templete */
+
+.container {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  column-gap: 40px;
+  row-gap: 70px;
+}
+
+.col {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  height: 230px;
+  border-radius: 10px;
+}
+
+.col:hover {
+  z-index: 1;
+  box-shadow: 5px 5px 5px white;
+}
+
+.col > img {
+  width: 360px;
+  height: 180px;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+}
+
+/* contact form */
+
+.full {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 40px;
+  margin: 20px;
+}
+
+.half {
+  margin-top: 20px;
+  height: 80vh;
+}
+
+.half > img {
+  height: 80vh;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+}
+
+.form {
+  width: 500px;
+  height: 400px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.form > label {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  color: aqua;
+}
+.form > input {
+  display: block;
+  width: 70%;
+  height: 40px;
+  border-radius: 30px;
+  color: black;
+  font-size: large;
+  background-color: hsl(34, 78%, 91%, 0.8);
+  margin-left: 60px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form > button {
+  width: 60%;
+  height: 35px;
+  background-color: rgb(85, 208, 85, 0.8);
+  color: red;
+  margin-left: 85px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: red;
+  color: rgb(85, 208, 85, 0.8);
+}
+
+/*    login     */
+
+.login {
+  width: 100%;
+  height: 90vh;
+}
+
+.login-fm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-fm > form {
+  border-radius: 10px;
+  border: 1px solid red;
+  width: 35%;
+  margin-top: 50px;
+  padding: 30px;
+  height: 300px;
+  box-shadow: 5px 5px 5px aqua;
+}
+
+.login-fm > form > label {
+  color: aqua;
+  margin-left: 40px;
+}
+
+.login-fm > form > input {
+  display: block;
+  height: 40px;
+  width: 80%;
+  border-radius: 30px;
+  color: black;
+  font-size: large;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.login-fm > form > button {
+  margin-left: 80px;
+  height: 35px;
+  background-color: aqua;
+  width: 60%;
+  border-radius: 30px;
+}
+
+.login-fm > form > button:hover {
+  background-color: brown;
+  color: aqua;
+}
+
+.extra {
+  color: azure;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+.extra > a {
+  color: red;
+}
+
+/* signUp */
+
+.sign {
+  width: 100%;
+  height: 90vh;
+}
+
+.sign-fm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-fm > form {
+  border-radius: 10px;
+  border: 1px solid red;
+  width: 35%;
+  margin-top: 50px;
+  padding: 30px;
+  box-shadow: 5px 5px 5px aqua;
+}
+
+.sign-fm > form > label {
+  color: aqua;
+  margin-left: 40px;
+}
+
+.sign-fm > form > input {
+  display: block;
+  height: 35px;
+  width: 80%;
+  border-radius: 30px;
+  color: black;
+  font-size: large;
+  margin-left: 40px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.sign-fm > form > button {
+  margin-left: 80px;
+  height: 35px;
+  background-color: aqua;
+  width: 60%;
+  border-radius: 30px;
+}
+
+.sign-fm > form > button:hover {
+  background-color: brown;
+  color: aqua;
+}
+
+.sign-fm > form > .extra {
+  color: azure;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+/* ------------- copy right --------------------*/
+
+.copy {
+  box-sizing: border-box;
+  background-color: red;
+  z-index: 1;
+}
